@@ -61,6 +61,7 @@ parser.add_argument(
         "DropoutAlbertModel",
         "DropoutRobertaModel",
         "DropoutGPT2Model",
+        "BertModel"
     ],
     help="Debiased model (e.g., SentenceDebiasModel) to evaluate.",
 )
@@ -69,7 +70,7 @@ parser.add_argument(
     action="store",
     type=str,
     default="bert-base-uncased",
-    choices=["bert-base-uncased", "albert-base-v2", "roberta-base", "gpt2"],
+    choices=["bert-base-uncased", "albert-base-v2", "roberta-base", "gpt2", "bert-base-cased"],
     help="HuggingFace model name or path (e.g., bert-base-uncased). Checkpoint from which a "
     "model is instantiated.",
 )
