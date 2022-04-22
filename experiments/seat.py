@@ -42,7 +42,7 @@ parser.add_argument(
     action="store",
     type=str,
     default="bert-base-uncased",
-    choices=["bert-base-uncased", "albert-base-v2", "roberta-base", "gpt2"],
+    choices=["bert-base-uncased", "albert-base-v2", "roberta-base", "gpt2", "bert-base-cased"],
     help="HuggingFace model name or path (e.g., bert-base-uncased). Checkpoint from which a "
     "model is instantiated.",
 )
@@ -87,7 +87,11 @@ if __name__ == "__main__":
         tokenizer=tokenizer,
     )
     results = runner()
-    print(results)
+    print("\n\n")
+    for entry in results:
+        for key, value in entry.items():
+            print(f"{key}: {value}")
+        print("=" * 100)
 
     os.makedirs(f"{args.persistent_dir}/results/seat", exist_ok=True)
     with open(f"{args.persistent_dir}/results/seat/{experiment_id}.json", "w") as f:

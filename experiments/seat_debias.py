@@ -151,7 +151,11 @@ if __name__ == "__main__":
         tokenizer=tokenizer,
     )
     results = runner()
-    print(results)
+    print("\n\n")
+    for entry in results:
+        for key, value in entry.items():
+            print(f"{key}: {value}")
+        print("=" * 100)
 
     os.makedirs(f"{args.persistent_dir}/results/seat", exist_ok=True)
     with open(f"{args.persistent_dir}/results/seat/{experiment_id}.json", "w") as f:
