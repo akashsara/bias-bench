@@ -7,7 +7,7 @@ setup(
     url="https://github.com/mcgill-nlp/bias-bench",
     packages=["bias_bench"],
     install_requires=[
-        "torch==1.10.2",
+        "torch==1.10.0",
         "transformers==4.16.2",
         "scipy==1.7.3",
         "scikit-learn==1.0.2",
