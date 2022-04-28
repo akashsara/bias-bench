@@ -26,7 +26,7 @@ if __name__ == "__main__":
     n_samples = 100000
     parametric = True
     model = "BertModel"
-    model_name_or_path = "bert-base-cased"
+    model_name_or_path = "bert-base-uncased"
     gender_tests = ["sent-weat6", "sent-weat6b", "sent-weat7", "sent-weat7b", "sent-weat8", "sent-weat8b"]
     race_tests = ["sent-angry_black_woman_stereotype", "sent-angry_black_woman_stereotype_b", "sent-weat3", "sent-weat3b", "sent-weat4", "sent-weat5", "sent-weat5b"]
     religion_tests = ["sent-religion1", "sent-religion1b", "sent-religion2", "sent-religion2b"]

@@ -25,7 +25,7 @@ parser.add_argument(
 if __name__ == "__main__":
     args = parser.parse_args()
     model = "BertForMaskedLM"
-    model_name_or_path = "bert-base-cased"
+    model_name_or_path = "bert-base-uncased"
     load_path = args.model_dir
     persistent_dir = args.output_dir
     thisdir = os.path.dirname(os.path.realpath(__file__))
